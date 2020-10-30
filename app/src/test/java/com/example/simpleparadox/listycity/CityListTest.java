@@ -32,6 +32,8 @@ class CityListTest {
     @Test
     void testDelete(){
         CityList cityList = mockCityList();
-        assertEquals(2, cityList.countCities());
+        assertEquals(1, cityList.countCities());
+        cityList.delete(mockCity());
+        assertEquals(0, cityList.countCities());
     }
 }
